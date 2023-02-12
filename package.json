@@ -1,8 +1,15 @@
 {
+  "name": "bcbailey-resume",
   "type": "module",
+  "version": "1.0.0",
+  "author": "Bradley C Bailey <brad@memoryleak.org>",
+  "repository": "github:bcbailey/resume",
+  "private": true,
   "scripts": {
     "build": "mkdir -p output/resume && cp resume.yaml output/ && cp assets/* output/resume/ && node build.js",
     "clean": "rm -rf output",
+    "lint": "eslint --fix *.js",
+    "pretest": "npm run lint",
     "test": "node test.js"
   },
   "dependencies": {
@@ -12,5 +19,12 @@
     "puppeteer": "^19.6.3",
     "word-wrap": "^1.2.3",
     "yaml": "^2.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-plugin-node": "^11.1.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }

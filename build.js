@@ -32,7 +32,7 @@ async function main() {
 
   // Render it as the different formats
   for (const [ type, format ] of formats.entries()) {
-    const { fn, file = `resume.${type}` } = format;
+    const file = format.file || `resume.${type}`;
     console.log(`Rendering ${type}...`);
     try {
       const output = await format.fn(data);
@@ -74,7 +74,7 @@ async function renderHtml(data) {
 
 // https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.page.md
 // https://blog.risingstack.com/pdf-from-html-node-js-puppeteer/
-async function renderPdf(data) {
+async function renderPdf() {
   // Make sure html file exists first
   const htmlFormat = formats.get('html') || { file: 'resume/index.html' };
   const htmlPath = path.join(__dirname, outputDirectory, htmlFormat.file);

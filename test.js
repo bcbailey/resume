@@ -117,7 +117,8 @@ async function main() {
     data = YAML.parse(content);
   } catch (err) {
     console.error('Error parsing YAML: ' + err);
-    process.exit(1);
+    process.exitCode = 1;
+    return;
   }
 
   // 2. Then run schema validation against it
@@ -126,7 +127,8 @@ async function main() {
   if (!valid) {
     console.log('YAML has the following schema errors:');
     console.log(ajv.errors);
-    process.exit(1);
+    process.exitCode = 1;
+    return;
   }
 }
 
