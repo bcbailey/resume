@@ -1,0 +1,77 @@
+<%- include('_header') %>
+
+<main class="resume">
+  <header>
+    <h1><%= name %></h1>
+    <address>
+      <a href="tel:<%= phone.replace(/\D/, '') %>"><%= phone %></a><br>
+      <a href="mailto:<%= email %>"><%= email %></a><br>
+      <%= address %>
+    </address>
+  </header>
+
+<% introduction.trim().split(/\n+/).forEach(intro => { -%>
+  <p class="introduction"><%= intro %></p>
+<% }) -%>
+
+  <section class="experience">
+    <h2>Experience</h2>
+    <div class="jobs">
+<% experience.forEach(job => { -%>
+      <div class="job">
+        <div class="details">
+          <h3 class="title"><%= job.title %></h3>
+          <div class="company"><%= job.company %></div>
+          <div class="location"><%= job.location %></div>
+          <div class="dates"><%= job.dates.start %> &ndash; <%= job.dates.end || 'Present' %></div>
+        </div>
+<%   job.description.trim().split(/\n+/).forEach(desc => { -%>
+        <p><%= desc %></p>
+<%   }) -%>
+      </div>
+<% }) -%>
+    </div>
+  </section>
+
+  <aside class="skills">
+    <h2>Skills</h2>
+    <div class="categories">
+<% skills.forEach(category => { -%>
+      <div class="category">
+        <h3><%= category.category %></h3>
+        <ul>
+<%   category.items.forEach(skill => { -%>
+          <li><%= skill %></li>
+<%   }) -%>
+        </ul>
+      </div>
+<% }) -%>
+    </div>
+  </aside>
+
+  <section class="education">
+    <h2>Education</h2>
+<% education.forEach(degree => { -%>
+    <div class="degree">
+      <div class="details">
+        <h3 class="title"><%= degree.title %></h3>
+        <div class="school"><%= degree.school %></div>
+        <% if (degree.location) { %><div class="location"><%= degree.location %></div><% } -%>
+      </div>
+      <div class="dates"><%= degree.dates.start %> &ndash; <%= degree.dates.end || 'Present' %></div>
+      <% if (degree.description) { %><p><%= degree.description.trim() %></p><% } %>
+    </div>
+<% }) -%>
+  </section>
+
+  <section class="references">
+    <h2>References <em>&</em> Code Samples</h2>
+<% references.forEach(ref => { -%>
+    <div class="reference">
+      <% if (ref.description) { %><p><%= ref.description.trim() %></p><% } %>
+    </div>
+<% }) -%>
+  </section>
+</main>
+
+<%- include('_footer') %>

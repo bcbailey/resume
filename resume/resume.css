@@ -1,0 +1,244 @@
+/* Main Layout */
+.resume {
+  display: grid;
+}
+
+.resume header {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 40rem) {
+  .resume {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1.25rem;
+    margin-top: 3rem;
+  }
+
+  .resume header {
+    grid-column: 1 / span 8;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .resume address {
+    flex: 1;
+    text-align: right;
+  }
+
+  .introduction {
+    grid-column: 1 / span 8;
+    grid-row: 2;
+  }
+
+  .experience {
+    grid-column: 1 / span 8;
+    grid-row: 4;
+  }
+
+  /* .skills {
+    grid-column: 7 / span 2;
+    grid-row: 3;
+  } */
+
+  .skills {
+    grid-column: 1 / span 8;
+    grid-row: 3;
+  }
+
+  .skills .categories {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .skills .category {
+    text-align: left;
+    flex: 1;
+  }
+
+  .education {
+    /* grid-column: 1 / span 8;
+    grid-row: 4; */
+    display: none;
+  }
+
+  .references {
+    grid-column: 1 / span 8;
+    grid-row: 5;
+  }
+}
+
+/* Typography */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.45;
+}
+
+h1, h2 {
+  font-family: 'Source Serif Pro', serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-style: italic;
+}
+
+h2 {
+  border-top: 5px solid #000;
+  border-bottom: 2px solid #000;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+p {
+  margin-block: 0 1rem;
+}
+
+@media screen and (min-width: 40rem) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+/* Sections */
+
+.introduction {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+
+.experience .job,
+.education .degree,
+.references p {
+  margin-block: 1rem;
+}
+
+.jobs {
+  border-left: 1px dotted #000;
+  margin-left: 10em;
+  /* border-right: 1px solid #000; */
+}
+
+.experience h2,
+.education h2,
+.skills h2,
+.references h2 {
+  padding-left: 1.5rem;
+}
+
+.categories,
+.references p {
+  margin-left: 1.5rem;
+}
+
+.experience .job {
+  position: relative;
+  padding: 0 1.5rem;
+  margin-block: 1.5rem;
+}
+
+.job .title {
+  line-height: 1.1;
+}
+
+.job::before {
+  content: '$';
+  text-align: center;
+  font-size: 1.2rem;
+  color: #eee;
+  position: absolute;
+  left: -1.02rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: #555;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.job .dates {
+  position: absolute;
+  font-style: italic;
+  font-size: 1rem;
+  text-align: right;
+  top: .2rem;
+  left: -9rem;
+  width: 7rem;
+}
+
+.job .details .title:after {
+  content: '';
+}
+
+.job .company,
+.job .location {
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.job .location::before { content: '('; }
+.job .location::after { content: ')'; }
+
+.details {
+  margin-bottom: .25rem;
+}
+
+.details,
+.details h3 {
+  font-size: 1.2rem !important;
+  font-weight: bold;
+}
+
+.details .title:after,
+/* .details .company:after, */
+.details .school:after {
+  content: ', ';
+  margin-right: .2em;
+}
+
+.details .dates {
+  font-weight: normal;
+}
+
+.skills {
+  margin-bottom: 1rem;
+}
+
+.skills h2 {
+  display: none;
+}
+
+.skills .category {
+  margin-block: 1rem;
+}
+
+.skills ul { list-style: none; }
+.skills li { display: inline; }
+.skills li::after { content: ', '; }
+.skills li:last-child::after { content: ''; }
+
+@media screen and (min-width: 40rem) {
+  /* .skills {
+    text-align: right;
+  } */
+
+  .skills li { display: block; }
+  .skills li::after { content: ''; }
+}
+
+
+footer {
+  margin-top: 3rem;
+  padding: .5rem 0;
+  border-top: 1px solid #000;
+  font-size: .75rem;
+}

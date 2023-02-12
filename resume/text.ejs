@@ -1,0 +1,44 @@
+# <%= name %>
+- <%= email %>
+- <%= phone %>
+- <%= address %>
+
+<%= wordwrap(introduction, { width: 76, indent: '' }) %>
+
+## Experience
+-------------
+
+<% experience.forEach(job => { -%>
+### <%= job.title %>
+<%= job.company %> (<%= job.location %>), <%= job.dates.start %> - <%= job.dates.end || 'Present' %>
+<%   if (job.description) { %>
+<%= wordwrap(job.description, { width: 76 }) %>
+<%   } %>
+<% }) -%>
+
+## Skills
+-------------
+
+<% skills.forEach(category => { -%>
+### <%= category.category -%>
+<%   category.items.forEach(skill => { %>
+- <%= skill -%>
+<%   }) %>
+
+<% }) -%>
+## Education
+-------------
+
+<% education.forEach(degree => { -%>
+### <%= degree.title %>
+<%= degree.school %><% if (degree.location) { %>, <%= degree.location %><% } %>  
+<%= degree.dates.start %> - <%= degree.dates.end || 'Present' %>
+<% if (degree.description) { %><%= wordwrap(degree.description, { width: 78, indent: '' }) %><% } -%>
+<% }) -%>
+
+## References & Code Samples
+-------------
+
+<% references.forEach(ref => { -%>
+<% if (ref.description) { %><%= wordwrap(ref.description, { width: 78, indent: '' }) %><% } %>
+<% }) -%>

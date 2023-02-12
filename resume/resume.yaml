@@ -1,0 +1,242 @@
+name: Bradley C. Bailey
+phone: (720) 404-6889
+email: brad@memoryleak.org
+address: Centennial, Colorado USA
+url: https://memoryleak.org
+
+introduction: >
+  Full-stack developer with over 20 years experience writing software using web
+  technologies. From infrastructure to databases to APIs to front-end design. A
+  true believer of writing documentation and tests. I am looking for a
+  challenging position in an industry that I am passionate about.
+
+experience:
+  - title: Principal Software Engineer
+    company: GoDaddy
+    location: Remote
+    url: https://www.godaddy.com/
+    dates:
+      start: April 2019
+    description: >
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, ipsum,
+      et dolor magni optio accusantium delectus aut sint dolore sapiente id
+      veniam amet fugiat illo ipsam. Adipisci fugit quaerat possimus? Lorem
+      ipsum dolor sit, amet consectetur adipisicing elit. Ipsa amet reiciendis
+      veniam obcaecati quisquam totam dolor. Reiciendis, cupiditate quas tempora
+      incidunt, voluptates perferendis vel iusto sapiente odio, perspiciatis
+      placeat itaque!
+
+  - title: Sr. Software Engineer
+    company: GoDaddy
+    location: Remote
+    url: https://www.godaddy.com/
+    dates:
+      start: June 2015
+      end: April 2019
+    description: >
+      Worked on the UX team building shared UX components blah blah, build
+      systems, infrastructure, APIs, etc.
+
+  - title: Sr. Software Engineer
+    company: GoDaddy
+    location: Remote
+    url: https://www.godaddy.com/
+    dates:
+      start: March 2014
+      end: June 2015
+    description: >
+      Build shared web hosting file manager application front-end, while
+      working with developers building Java based API.
+
+  - title: Javascript Web Developer
+    company: GoDaddy
+    location: Remote
+    url: https://www.godaddy.com/
+    dates:
+      start: November 2010
+      end: March 2014
+    description: >
+      At Go Daddy I worked with a small agile team on the Easy Database for
+      Websites product doing front-end development using JavaScript, PHP, HTML,
+      and CSS. EZDB is a simple database application that allows users to define
+      and manage data and easily embed widgets onto their website. When I came
+      on board I helped to improve the code quality and bring the user interface
+      in line with user experience designs and standards. I introduced
+      JavaScript unit tests and added progressive enhancement using the latest
+      CSS3 and HTML5 technologies. Some examples are HTML5 drag-and-drop file
+      uploading, localStorage for UI preferences, and CSS3 for UI elements that
+      traditionally would’ve needed multiple sliced images. I also designed and
+      documented a CSS interface to allow customers unlimited customization of
+      their widgets and provided assistance in the forum.
+
+  - title: Sr. Software Engineer
+    company: Latisys
+    location: Remote
+    url: https://latisys.com
+    dates:
+      start: February 2008
+      end: November 2010
+    description: >
+      After Data393 was acquired by Latisys, I worked remotely with the
+      development team from the Irvine, CA branch. I introduced subversion for
+      source control, Trac for project management, and other best practices. We
+      built a corporate wide customer management and sales application using
+      Ruby on Rails. Besides working to design the UI and develop the
+      application, I also configured and maintained the production systems. I
+      continued to maintain internal Perl applications, and as the company grew
+      I was a vital asset in integration projects with Salesforce.com, Great
+      Plains, and others.
+
+  - title: Sr. Software Engineer
+    company: Data393
+    location: Remote
+    url: https://data393.com/
+    dates:
+      start: August 2005
+      end: February 2008
+    description: >
+      Working closely with the Engineering department, my primary role was
+      internal application development. New applications were designed and
+      written for managing datacenter assets, tracking IP space, interfacing
+      with network equipment, usage tracking, account provisioning, and more.
+      All were written using Object Oriented Perl, mod_perl, MySQL database, and
+      were well tested, and documented. I also continued to maintain the
+      existing helpdesk software, write scripts to help with the system
+      administration tasks, and provide statistical reports. In addition I also
+      provided escalated support for systems and network related problems as
+      part Engineering.
+
+  - title: Software Engineer
+    company: E-COM Media Group
+    location: Englewood, Colorado
+    url: https://ecommedia.com
+    dates:
+      start: May 2004
+      end: August 2005
+    description: >
+      When Data393 acquired E-com Media Group, I transferred to that division to
+      better utilize my skill set. I worked with a team of other developers and
+      designers where I introduced source control with CVS and other software
+      development best practices. Our primary task was designing and developing
+      a new version of the company’s e-commerce, content management, sales, and
+      customer management tool. We used mod_perl, MySQL, and utilized load
+      balancing. I lead development of the e-commerce module and web service
+      APIs. I also built customer frontend e-commerce websites.
+      
+      I also used ASP and MS SQL to develop custom applications for customers
+      and maintain the old version of the company’s flagship product. Using my
+      previous experience I helped design and develop a new helpdesk and
+      customer portal for Data393.
+
+  - title: Sr. Software Engineer
+    company: Ventures Online
+    location: Englewood, Colorado
+    url: https://venturesonline.com/
+    dates:
+      start: January 2003
+      end: May 2004
+    description: >
+      I developed modular and reusable OO Perl code including documentation and
+      test suites for in house applications used in the billing and web hosting
+      environments. I installed, configured, and maintained the corporate CVS
+      server for source control as well as wrote documentation for software
+      development and source control guidelines.
+
+      I maintained the Perl helpdesk software by fixing bugs. I increased staff
+      efficiency by adding new features and performing profiling to optimize the
+      code and database for a 1,000% speed increase. Other tasks were writing
+      various reports for the support, billing, and hosting environments as well
+      as writing the order system and automated provisioning processes.
+
+  - title: Systems Administrator / Support Technician
+    company: Ventures Online
+    location: Englewood, Colorado
+    url: https://venturesonline.com/
+    dates:
+      start: January 2002
+      end: December 2002
+    description: >          
+      Managed and supported server software such as Apache, BIND, Exim, and
+      MySQL on Linux and FreeBSD in a web hosting environment. I also performed
+      server hardware replacements and upgrades, handled day to day customer
+      support via email and helpdesk software, and wrote and managed
+      administrative utilities with Perl.
+
+  - title: Contract Perl Programmer
+    company: perlcoders.com
+    location: Remote
+    url: https://perlcoders.com
+    dates:
+      start: November 2000
+      end: March 2001
+    description: >
+      On a contract basis I developed CGI applications using Perl and MySQL. I
+      communicated directly with customers to gather project requirements and
+      provide status. When projects were complete I provided installation,
+      configuration, and support.
+
+  - title: Computer Technician
+    company: Bargain Computer Advisor
+    location: Loveland, Colorado
+    url: https://bcadvisor.com
+    dates:
+      start: November 1998
+      end: June 1999
+    description: >      
+      As a technician I performed diagnostics and repairs of computers, as well
+      as building new ones. I also provided technical support to customers in
+      person and on the phone and handled sales of computers, accessories, and
+      software.
+
+skills:
+  - category: Languages
+    items:
+      - JavaScript
+      - Perl
+      - Ruby
+      - PHP
+      - SQL
+
+  - category: Frameworks
+    items:
+      - React
+      - Ruby on Rails
+      - mod_perl
+      - jQuery
+      - Prototype JS
+
+  - category: Web Technologies
+    items:
+      - HTML 5
+      - CSS 3
+      - DHTML and AJAX
+      - JSON and XML
+      - REST, SOAP, XML-RPC
+
+  - category: Software
+    items:
+      - Apache
+      - BIND
+      - Exim, qmail, Postfix
+      - CVS, svn, git
+      - MySQL
+
+  - category: DevOps
+    items:
+      - AWS
+      - Kubernetes
+      - Docker
+      - DNS
+      - Jenkins
+
+education:
+  - title: Cisco Networking Academy CCNA
+    school: Front Range Community College
+    location: Westminster, Colorado
+    url: https://frontrange.edu/
+    dates:
+      start: January 2000
+      end: December 2000
+
+references:
+  - description: Available upon request.
