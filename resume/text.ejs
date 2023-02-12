@@ -19,12 +19,16 @@
 ## Skills
 -------------
 
-<% skills.forEach(category => { -%>
-### <%= category.category -%>
-<%   category.items.forEach(skill => { %>
-- <%= skill -%>
-<%   }) %>
+<% skills.forEach(skill => { -%>
+<%   if (typeof skill === 'object') { -%>
+### <%= skill.category -%>
+<%     skill.items.forEach(label => { %>
+- <%= label -%>
+<%     }) %>
 
+<%   } else { -%>
+- <%= skill %>
+<%   } -%>
 <% }) -%>
 ## Education
 -------------
