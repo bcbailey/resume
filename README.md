@@ -1,4 +1,4 @@
-# resume
+# My Resume
 
 This repo contains the scripts used to build my resume. The `resume.yaml` is
 the master format for the data, and all other files are generated from it.

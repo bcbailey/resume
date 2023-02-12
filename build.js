@@ -2,8 +2,8 @@ import { readFile, writeFile, stat as statFile } from 'node:fs/promises';
 import path from 'path';
 import YAML from 'yaml';
 import ejs from 'ejs';
-import wordwrap from 'word-wrap';
 import lodash from 'lodash';
+import wordwrap from 'word-wrap';
 import puppeteer from 'puppeteer';
 
 const __dirname = path.dirname(process.argv[1]);
@@ -11,7 +11,7 @@ const outputDirectory = process.argv[2] || 'output';
 const templateDirectory = 'templates';
 
 // Map of format to render function
-const renderers = new Map([
+const formats = new Map([
   [ 'json', { fn: renderJson } ],
   [ 'txt',  { fn: renderText } ],
   [ 'md',   { fn: renderText } ],
@@ -30,38 +30,17 @@ async function main() {
   const content = await readFile('resume.yaml', 'utf8');
   const data = YAML.parse(content);
 
-  for (const [ type, renderer ] of renderers.entries()) {
-    const { fn, file = `resume.${type}` } = renderer;
-
+  // Render it as the different formats
+  for (const [ type, format ] of formats.entries()) {
+    const { fn, file = `resume.${type}` } = format;
+    console.log(`Rendering ${type}...`);
     try {
-      console.log(`Rendering ${type}...`);
-      const output = await render(type, fn, data);
-      await write(path.join(outputDirectory, file), output);
+      const output = await format.fn(data);
+      await writeFile(path.join(outputDirectory, file), output);
     }
     catch (err) {
-      console.error(err.message);
+      console.error('ERROR: ' + err.message);
     }
-  }
-}
-
-async function render(type, fn, data) {
-  let content;
-  try {
-    content = await fn(data);
-  }
-  catch (err) {
-    throw new Error(`Error rendering ${type}: ${err.message}`);
-  }
-
-  return content;
-}
-
-async function write(file, content) {
-  try {
-    await writeFile(file, content);
-  }
-  catch (err) {
-    throw new Error(`Error writing ${file}: ${err.message}`);
   }
 }
 
@@ -74,7 +53,8 @@ async function renderTemplate(file, data, opts={}) {
     {
       root: __dirname,
       views: [ path.join(__dirname, templateDirectory) ],
-      filename: file
+      filename: file,
+      ...opts
     });
 
   return output;
@@ -85,27 +65,28 @@ async function renderJson(data) {
 }
 
 async function renderText(data) {
-  return renderTemplate('text.ejs', data);
+  return await renderTemplate('text.ejs', data);
 }
 
 async function renderHtml(data) {
-  return renderTemplate('html.ejs', data);
+  return await renderTemplate('html.ejs', data);
 }
 
 // https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.page.md
 // https://blog.risingstack.com/pdf-from-html-node-js-puppeteer/
 async function renderPdf(data) {
   // Make sure html file exists first
-  const htmlPath = path.join(__dirname, outputDirectory, renderers.get('html').file);
+  const htmlFormat = formats.get('html') || { file: 'resume/index.html' };
+  const htmlPath = path.join(__dirname, outputDirectory, htmlFormat.file);
   try {
     await statFile(htmlPath);
   }
   catch (err) {
-    throw new Error('index.html not found');
+    throw new Error(`dependency ${htmlFormat.file} not found`);
   }
 
   // Navigate to the page with a headless browser and take a PDF capture of it
-  // This uses the print stylesheet when creating the PDF
+  // This uses the print stylesheet when creating the PDF.
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   await page.goto('file://' + htmlPath, { waitUntil: 'load' });
