@@ -1,8 +1,8 @@
 {
   "type": "module",
   "scripts": {
-    "build": "node build.js",
-    "clean": "rm index.html resume.json resume.md resume.txt resume.pdf",
+    "build": "mkdir -p output/resume && cp resume.yaml output/ && cp assets/* output/resume/ && node build.js",
+    "clean": "rm -rf output",
     "test": "node test.js"
   },
   "dependencies": {

@@ -1,16 +1,21 @@
 import { readFile, writeFile, stat as statFile } from 'node:fs/promises';
+import path from 'path';
 import YAML from 'yaml';
 import ejs from 'ejs';
 import wordwrap from 'word-wrap';
 import lodash from 'lodash';
 import puppeteer from 'puppeteer';
 
+const __dirname = path.dirname(process.argv[1]);
+const outputDirectory = process.argv[2] || 'output';
+const templateDirectory = 'templates';
+
 // Map of format to render function
 const renderers = new Map([
   [ 'json', { fn: renderJson } ],
   [ 'txt',  { fn: renderText } ],
   [ 'md',   { fn: renderText } ],
-  [ 'html', { fn: renderHtml, file: 'index.html' } ],
+  [ 'html', { fn: renderHtml, file: 'resume/index.html' } ],
   [ 'pdf',  { fn: renderPdf } ]
 ]);
 
@@ -31,7 +36,7 @@ async function main() {
     try {
       console.log(`Rendering ${type}...`);
       const output = await render(type, fn, data);
-      await write(file, output);
+      await write(path.join(outputDirectory, file), output);
     }
     catch (err) {
       console.error(err.message);
@@ -61,13 +66,14 @@ async function write(file, content) {
 }
 
 async function renderTemplate(file, data, opts={}) {
-  const template = await readFile(file, 'utf8');
+  const template = await readFile(path.join(templateDirectory, file), 'utf8');
   const output = ejs.render(template, {
       ...helpers,
       ...data
     },
     {
-      root: process.cwd(),
+      root: __dirname,
+      views: [ path.join(__dirname, templateDirectory) ],
       filename: file
     });
 
@@ -90,8 +96,9 @@ async function renderHtml(data) {
 // https://blog.risingstack.com/pdf-from-html-node-js-puppeteer/
 async function renderPdf(data) {
   // Make sure html file exists first
+  const htmlPath = path.join(__dirname, outputDirectory, renderers.get('html').file);
   try {
-    await statFile('index.html');
+    await statFile(htmlPath);
   }
   catch (err) {
     throw new Error('index.html not found');
@@ -99,10 +106,9 @@ async function renderPdf(data) {
 
   // Navigate to the page with a headless browser and take a PDF capture of it
   // This uses the print stylesheet when creating the PDF
-  const resume = 'file://' + process.cwd() + '/index.html';
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
-  await page.goto(resume, { waitUntil: 'load' });
+  await page.goto('file://' + htmlPath, { waitUntil: 'load' });
   const pdf = await page.pdf({ format: 'Letter' });
   await browser.close();
 
