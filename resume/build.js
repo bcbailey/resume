@@ -25,16 +25,17 @@ async function main() {
   const content = await readFile('resume.yaml', 'utf8');
   const data = YAML.parse(content);
 
-  try {
-    renderers.forEach(async (renderer, type) => {
+  for (const [ type, renderer ] of renderers.entries()) {
+    const { fn, file = `resume.${type}` } = renderer;
+
+    try {
       console.log(`Rendering ${type}...`);
-      const file = renderer.file || `resume.${type}`;
-      const output = await render(type, renderer.fn, data);
+      const output = await render(type, fn, data);
       await write(file, output);
-    });
-  }
-  catch (err) {
-    console.error(err.message);
+    }
+    catch (err) {
+      console.error(err.message);
+    }
   }
 }
 
@@ -89,9 +90,11 @@ async function renderHtml(data) {
 // https://blog.risingstack.com/pdf-from-html-node-js-puppeteer/
 async function renderPdf(data) {
   // Make sure html file exists first
-  const exists = await statFile('index.html');
-  if (!exists) {
-    throw new Error('Unable to render PDF: index.html not found');
+  try {
+    await statFile('index.html');
+  }
+  catch (err) {
+    throw new Error('index.html not found');
   }
 
   // Navigate to the page with a headless browser and take a PDF capture of it
