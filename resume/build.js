@@ -4,24 +4,8 @@ import ejs from 'ejs';
 import wordwrap from 'word-wrap';
 import lodash from 'lodash';
 
-// Map of format to render function
-const renderers = new Map([
-  [ 'json', renderJson ],
-  [ 'txt',  renderText ],
-  [ 'md',   renderText ],
-  [ 'html', renderHtml ],
-  [ 'pdf',  renderPdf ]
-]);
-
-// Template Helpers
-const helpers = {
-  _: lodash,
-  wordwrap
-};
-
 // Formats:
 // 
-// yaml
 // json (JSON.stringify)
 // txt (rendered from EJS template)
 // html (rendered from EJS template, including screen and print stylesheets)
@@ -29,37 +13,45 @@ const helpers = {
 // pdf (render html in headless browser and then export to pdf with print stylesheet)
 //      see: https://blog.risingstack.com/pdf-from-html-node-js-puppeteer/
 
+// Map of format to render function
+const renderers = new Map([
+  [ 'json', { fn: renderJson } ],
+  [ 'txt',  { fn: renderText } ],
+  [ 'md',   { fn: renderText } ],
+  [ 'html', { fn: renderHtml, file: 'index.html' } ],
+  [ 'pdf',  { fn: renderPdf } ]
+]);
 
-// Read in YAML and parse
-// 
+// Template helpers
+const helpers = {
+  _: lodash,
+  wordwrap
+};
 
 async function main() {
-  const data = await readFile('resume.yaml', 'utf8');
-  const parsed = YAML.parse(data);
+  // Read and parse YAML data
+  const content = await readFile('resume.yaml', 'utf8');
+  const data = YAML.parse(content);
 
   try {
-    for (let type of renderers.keys()) {
-      const content = await render(parsed, type);
-      await write(`resume.${type}`, content);
-    }
+    renderers.forEach(async (renderer, type) => {
+      const file = renderer.file || `resume.${type}`;
+      const output = await render(type, renderer.fn, data);
+      await write(file, output);
+    });
   }
   catch (err) {
     console.error(err.message);
   }
 }
 
-async function render(data, format, file) {
-  const renderer = renderers.get(format);
-  if (!renderer) {
-    throw new Error(`No renderer found for ${format} format`);
-  }
-
+async function render(type, fn, data) {
   let content;
   try {
-    content = await renderer(data);
+    content = await fn(data);
   }
   catch (err) {
-    throw new Error(`Error rendering ${format}: ${err.message}`);
+    throw new Error(`Error rendering ${type}: ${err.message}`);
   }
 
   return content;
