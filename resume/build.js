@@ -1,17 +1,9 @@
+import { readFile, writeFile, stat as statFile } from 'node:fs/promises';
 import YAML from 'yaml';
-import { readFile, writeFile } from 'node:fs/promises';
 import ejs from 'ejs';
 import wordwrap from 'word-wrap';
 import lodash from 'lodash';
-
-// Formats:
-// 
-// json (JSON.stringify)
-// txt (rendered from EJS template)
-// html (rendered from EJS template, including screen and print stylesheets)
-//      https://www.npmjs.com/package/textr or smartypants or retext
-// pdf (render html in headless browser and then export to pdf with print stylesheet)
-//      see: https://blog.risingstack.com/pdf-from-html-node-js-puppeteer/
+import puppeteer from 'puppeteer';
 
 // Map of format to render function
 const renderers = new Map([
@@ -35,6 +27,7 @@ async function main() {
 
   try {
     renderers.forEach(async (renderer, type) => {
+      console.log(`Rendering ${type}...`);
       const file = renderer.file || `resume.${type}`;
       const output = await render(type, renderer.fn, data);
       await write(file, output);
@@ -92,9 +85,25 @@ async function renderHtml(data) {
   return renderTemplate('html.ejs', data);
 }
 
+// https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.page.md
+// https://blog.risingstack.com/pdf-from-html-node-js-puppeteer/
 async function renderPdf(data) {
-  // Make sure resume.html exists first
-  return 'Not implemented yet';
+  // Make sure html file exists first
+  const exists = await statFile('index.html');
+  if (!exists) {
+    throw new Error('Unable to render PDF: index.html not found');
+  }
+
+  // Navigate to the page with a headless browser and take a PDF capture of it
+  // This uses the print stylesheet when creating the PDF
+  const resume = 'file://' + process.cwd() + '/index.html';
+  const browser = await puppeteer.launch({ headless: true });
+  const page = await browser.newPage();
+  await page.goto(resume, { waitUntil: 'load' });
+  const pdf = await page.pdf({ format: 'Letter' });
+  await browser.close();
+
+  return pdf;
 }
 
 main();
