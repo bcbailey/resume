@@ -1,22 +1,52 @@
 /* Main Layout */
+.bar {
+  position: absolute;
+}
+
 .resume {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 .resume header {
+  order: 1;
   margin-bottom: 1rem;
+}
+
+.introduction {
+  order: 2;
+}
+
+.experience {
+  order: 4;
+}
+
+.skills {
+  order: 3;
+}
+
+.education {
+  display: none;
+}
+
+.references {
+  order: 5;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: .5rem 0;
+  border-top: 1px solid #000;
+  font-size: .75rem;
 }
 
 @media screen and (min-width: 40rem) {
   .resume {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 1.25rem;
     margin-top: 3rem;
   }
 
   .resume header {
-    grid-column: 1 / span 8;
     display: flex;
     width: 100%;
     align-items: center;
@@ -26,26 +56,6 @@
   .resume address {
     flex: 1;
     text-align: right;
-  }
-
-  .introduction {
-    grid-column: 1 / span 8;
-    grid-row: 2;
-  }
-
-  .experience {
-    grid-column: 1 / span 8;
-    grid-row: 4;
-  }
-
-  /* .skills {
-    grid-column: 7 / span 2;
-    grid-row: 3;
-  } */
-
-  .skills {
-    grid-column: 1 / span 8;
-    grid-row: 3;
   }
 
   .skills .categories {
@@ -58,15 +68,8 @@
     flex: 1;
   }
 
-  .education {
-    /* grid-column: 1 / span 8;
-    grid-row: 4; */
-    display: none;
-  }
-
-  .references {
-    grid-column: 1 / span 8;
-    grid-row: 5;
+  footer {
+    margin-top: 3rem;
   }
 }
 
@@ -81,7 +84,7 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-style: italic;
 }
 
@@ -90,14 +93,8 @@ h2 {
   border-bottom: 2px solid #000;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-}
-
-h3 {
-
-}
-
-h4 {
-
+  line-height: 1.1;
+  padding-block: .25em .2em;
 }
 
 p {
@@ -108,41 +105,30 @@ p {
   h1 {
     font-size: 5rem;
   }
+
+  h2 {
+    padding-left: 1.5rem;
+  }
+
+  .categories,
+  .references p {
+    margin-left: 1.5rem;
+  }  
 }
 
 /* Sections */
-
 .introduction {
   font-size: 1.3rem;
   margin-bottom: 0;
 }
 
-.experience .job,
-.education .degree,
-.references p {
+.job,
+.degree,
+.reference {
   margin-block: 1rem;
 }
 
-.jobs {
-  border-left: 1px dotted #000;
-  margin-left: 10em;
-  /* border-right: 1px solid #000; */
-}
-
-.experience h2,
-.education h2,
-.skills h2,
-.references h2 {
-  padding-left: 1.5rem;
-}
-
-.categories,
-.references p {
-  margin-left: 1.5rem;
-}
-
-.experience .job {
-  position: relative;
+.job {
   padding: 0 1.5rem;
   margin-block: 1.5rem;
 }
@@ -151,31 +137,7 @@ p {
   line-height: 1.1;
 }
 
-.job::before {
-  content: '$';
-  text-align: center;
-  font-size: 1.2rem;
-  color: #eee;
-  position: absolute;
-  left: -1.02rem;
-  width: 1.8rem;
-  height: 1.8rem;
-  background: #555;
-  border-radius: 50%;
-  border: 1px solid #000;
-}
-
-.job .dates {
-  position: absolute;
-  font-style: italic;
-  font-size: 1rem;
-  text-align: right;
-  top: .2rem;
-  left: -9rem;
-  width: 7rem;
-}
-
-.job .details .title:after {
+.job .title:after {
   content: '';
 }
 
@@ -188,6 +150,11 @@ p {
 .job .location::before { content: '('; }
 .job .location::after { content: ')'; }
 
+.job .dates {
+  font-style: italic;
+  font-size: 1rem;
+}
+
 .details {
   margin-bottom: .25rem;
 }
@@ -199,7 +166,6 @@ p {
 }
 
 .details .title:after,
-/* .details .company:after, */
 .details .school:after {
   content: ', ';
   margin-right: .2em;
@@ -221,24 +187,58 @@ p {
   margin-block: 1rem;
 }
 
+/* .skills .category:last-child { margin-bottom: 0; } */
+
 .skills ul { list-style: none; }
 .skills li { display: inline; }
 .skills li::after { content: ', '; }
 .skills li:last-child::after { content: ''; }
 
 @media screen and (min-width: 40rem) {
-  /* .skills {
-    text-align: right;
-  } */
-
   .skills li { display: block; }
   .skills li::after { content: ''; }
 }
 
+/* Timeline */
 
-footer {
-  margin-top: 3rem;
-  padding: .5rem 0;
-  border-top: 1px solid #000;
-  font-size: .75rem;
+.jobs {
+  border-left: 2px dotted #888;
+  margin-left: .8em;
+}
+
+.job {
+  position: relative;
+  margin-block: 2rem;
+}
+
+.job:last-child { margin-bottom: 0; }
+
+.job::before {
+  position: absolute;
+  left: -.9rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  content: '//';
+  text-align: center;
+  font-size: .7rem;
+  font-weight: bold;
+  color: #eee;
+  background: #555;
+  outline: 1px solid #555;
+  border: 3px solid #f0f0f0;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 40rem) {
+  .jobs {
+    margin-left: 10em;
+  }
+
+  .job .dates {
+    position: absolute;
+    top: .2rem;
+    left: -9rem;
+    width: 7rem;
+    text-align: right;
+  }
 }
