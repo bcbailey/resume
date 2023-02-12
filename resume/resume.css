@@ -41,7 +41,7 @@ footer {
   font-size: .75rem;
 }
 
-@media screen and (min-width: 40rem) {
+@media print, (min-width: 40rem) {
   .resume {
     margin-top: 3rem;
   }
@@ -81,6 +81,7 @@ body {
 
 h1, h2 {
   font-family: 'Source Serif Pro', serif;
+  line-height: 1.1;
 }
 
 h1 {
@@ -93,7 +94,6 @@ h2 {
   border-bottom: 2px solid #000;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  line-height: 1.1;
   padding-block: .25em .2em;
 }
 
@@ -101,7 +101,7 @@ p {
   margin-block: 0 1rem;
 }
 
-@media screen and (min-width: 40rem) {
+@media print, (min-width: 40rem) {
   h1 {
     font-size: 5rem;
   }
@@ -120,6 +120,10 @@ p {
 .introduction {
   font-size: 1.3rem;
   margin-bottom: 0;
+}
+
+.references {
+  margin-top: 1rem;
 }
 
 .job,
@@ -187,14 +191,12 @@ p {
   margin-block: 1rem;
 }
 
-/* .skills .category:last-child { margin-bottom: 0; } */
-
 .skills ul { list-style: none; }
 .skills li { display: inline; }
 .skills li::after { content: ', '; }
 .skills li:last-child::after { content: ''; }
 
-@media screen and (min-width: 40rem) {
+@media print, (min-width: 40rem) {
   .skills li { display: block; }
   .skills li::after { content: ''; }
 }
@@ -229,7 +231,7 @@ p {
   border-radius: 50%;
 }
 
-@media screen and (min-width: 40rem) {
+@media print, (min-width: 40rem) {
   .jobs {
     margin-left: 10em;
   }
@@ -240,5 +242,48 @@ p {
     left: -9rem;
     width: 7rem;
     text-align: right;
+  }
+}
+
+/* Print specific styles */
+
+@media print {
+  @page {
+    margin: 2cm;
+  }
+
+  @page:left {
+    @bottom-left {
+      content: counter(page);
+    }
+  }
+
+  body {
+    font-size: 10pt;
+  }
+
+  h1 {
+    font-size: 46pt;
+  }
+
+  .skills {
+    margin-bottom: 0;
+  }
+
+  /* .job {
+    break-inside: avoid;
+  } */
+
+  /* a:after {
+    content: "("attr(href)")";
+  } */
+
+  .resume {
+    margin-top: 0;
+  }
+
+  .bar,
+  footer {
+    display: none;
   }
 }
