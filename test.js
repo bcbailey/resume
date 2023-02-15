@@ -3,10 +3,8 @@ import YAML from 'yaml';
 import Ajv from 'ajv';
 
 async function main() {
-  let content;
-  let data;
-
   // 1. First load the YAML file and make sure it can be read and parsed
+  let content, data;
   try {
     content = await readFile('resume.yaml', 'utf8');
     data = YAML.parse(content);
