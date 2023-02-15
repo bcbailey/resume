@@ -23,7 +23,7 @@ body {
   background: linear-gradient(var(--bg-light-color), var(--bg-dark-color));
   max-width: 60rem;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem 1rem 0;
 }
 
 body::before {
@@ -77,7 +77,7 @@ footer {
 
 @media print, (min-width: 40rem) {
   .resume {
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
 
   .resume header {
@@ -135,13 +135,17 @@ p {
   margin-block: 0 1rem;
 }
 
+footer p {
+  margin: 0;
+}
+
 @media print, (min-width: 40rem) {
   h1 {
     font-size: 5rem;
   }
 
   h2 {
-    padding-left: 1.5rem;
+    padding-left: 1.3rem;
   }
 
   .categories,
@@ -154,10 +158,6 @@ p {
 .introduction {
   font-size: 1.3rem;
   margin-bottom: 0;
-}
-
-.references {
-  margin-top: 1rem;
 }
 
 .job,
@@ -248,9 +248,9 @@ p {
 
 .job::before {
   position: absolute;
-  left: -.9rem;
-  width: 1.2rem;
-  height: 1.2rem;
+  left: -.8rem;
+  width: 1.5rem;
+  height: 1.5rem;
   content: '//';
   text-align: center;
   font-size: .7rem;
