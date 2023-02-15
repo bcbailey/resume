@@ -1,6 +1,40 @@
+:root {
+  --bg-dark-color: #e0e0e0;
+  --bg-light-color: #fff;
+  --fg-color: #333;
+  --bar-height: 10px;
+  --bar-color: #000;
+}
+
+/* Quick and dirty css reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* Main Layout */
-.bar {
+
+body {
+  color: var(--fg-color);;
+  background-color: var(--bg-light-color);
+  background: linear-gradient(var(--bg-light-color), var(--bg-dark-color));
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+body::before {
+  content: '';
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--bar-height);
+  background-color: var(--bar-color);
+  border-bottom: 1px solid var(--bg-dark-color);
 }
 
 .resume {
@@ -141,10 +175,6 @@ p {
   line-height: 1.1;
 }
 
-.job .title:after {
-  content: '';
-}
-
 .job .company,
 .job .location {
   font-size: 1rem;
@@ -169,8 +199,8 @@ p {
   font-weight: bold;
 }
 
-.details .title:after,
-.details .school:after {
+.details .title::after,
+.details .school::after {
   content: ', ';
   margin-right: .2em;
 }
@@ -197,6 +227,7 @@ p {
 .skills li:last-child::after { content: ''; }
 
 @media print, (min-width: 40rem) {
+  .details .title::after { content: ''; }
   .skills li { display: block; }
   .skills li::after { content: ''; }
 }
