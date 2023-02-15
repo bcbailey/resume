@@ -30,12 +30,15 @@ async function main() {
   const content = await readFile('resume.yaml', 'utf8');
   const data = YAML.parse(content);
 
+  // Trim down work history
+  data.experience = data.experience.slice(0, 7);
+
   // Render it as the different formats
   for (const [ type, format ] of formats.entries()) {
     const file = format.file || `resume.${type}`;
     console.log(`Rendering ${type}...`);
     try {
-      const output = await format.fn(data);
+      const output = await format.fn({ format: type, ...data });
       await writeFile(path.join(outputDirectory, file), output);
     }
     catch (err) {
@@ -72,8 +75,6 @@ async function renderHtml(data) {
   return await renderTemplate('html.ejs', data);
 }
 
-// https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.page.md
-// https://blog.risingstack.com/pdf-from-html-node-js-puppeteer/
 async function renderPdf() {
   // Make sure html file exists first
   const htmlFormat = formats.get('html') || { file: 'resume/index.html' };
@@ -87,6 +88,9 @@ async function renderPdf() {
 
   // Navigate to the page with a headless browser and take a PDF capture of it
   // This uses the print stylesheet when creating the PDF.
+  //
+  // https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.page.md
+  // https://blog.risingstack.com/pdf-from-html-node-js-puppeteer/
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   await page.goto('file://' + htmlPath, { waitUntil: 'load' });
