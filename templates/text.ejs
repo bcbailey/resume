@@ -5,6 +5,7 @@
 
 <%= wordwrap(introduction, { width: 76, indent: '' }) %>
 
+
 ## Experience
 -------------
 
@@ -18,18 +19,18 @@
 
 ## Skills
 -------------
-
 <% skills.forEach(skill => { -%>
 <%   if (typeof skill === 'object') { -%>
-### <%= skill.category -%>
-<%     skill.items.forEach(label => { %>
-- <%= label -%>
-<%     }) %>
 
+### <%= skill.category %>
+<%     skill.items.forEach(label => { -%>
+- <%= label %>
+<%     }) -%>
 <%   } else { -%>
 - <%= skill %>
 <%   } -%>
-<% }) -%>
+<% }) %>
+
 ## Education
 -------------
 
@@ -38,7 +39,7 @@
 <%= degree.school %><% if (degree.location) { %>, <%= degree.location %><% } %>  
 <%= degree.dates.start %> - <%= degree.dates.end || 'Present' %>
 <% if (degree.description) { %><%= wordwrap(degree.description, { width: 78, indent: '' }) %><% } -%>
-<% }) -%>
+<% }) %>
 
 ## References & Code Samples
 -------------
