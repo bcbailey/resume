@@ -1,7 +1,7 @@
 # My Resume
 
-This repo contains the scripts used to build my resume. The `resume.yaml` is
-the master format for the data, and all other files are generated from it.
+This repo contains the scripts used to generate all of the formats of my resume
+from the `resume.yaml` file.
 
 ## Validating
 
@@ -9,8 +9,8 @@ the master format for the data, and all other files are generated from it.
 npm test
 ```
 
-This will validate that the `resume.yaml` file is valid and matches the specified
-JSON schema.
+This will validate that the `resume.yaml` file is valid and matches the
+specified JSON schema.
 
 ## Building
 
@@ -41,8 +41,8 @@ data.
 
 ### .md
 
-This is a simple text or markdown file format. It is built using the `templates/text.ejs`
-template.
+This is a simple text or markdown file format. It is built using the
+`templates/text.ejs` template.
 
 ### .json
 
@@ -54,13 +54,14 @@ This is the master data format.
 
 ### .html
 
-This is an HTML version of the resume. It is built using the `templates/html.ejs`
-template file, and anything in the `assets/` directory.
+This is an HTML version of the resume. It is built using the
+`templates/html.ejs` template file, and anything in the `assets/` directory.
 
 ### .pdf
 
-This is the PDF version. It is built by using `puppeteer` and loading the HTML
-version. It then prints it to PDF taking advantage of print stylesheets.
+This is the PDF version. It is built by using `puppeteer` to load the HTML in a
+headless browser. It then prints it to PDF taking advantage of print
+stylesheets.
 
 ## Cleanup
 
@@ -68,4 +69,4 @@ version. It then prints it to PDF taking advantage of print stylesheets.
 npm run clean
 ```
 
-This will remove any extra build artifacts.
+This removes any extra build artifacts.
