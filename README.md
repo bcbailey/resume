@@ -3,6 +3,8 @@
 This repo contains the scripts used to generate all of the formats of my resume
 from the `resume.yaml` file.
 
+https://memoryleak.org/resume/
+
 ## Validating
 
 ```sh
