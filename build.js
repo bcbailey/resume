@@ -93,7 +93,7 @@ async function renderPdf() {
   // https://blog.risingstack.com/pdf-from-html-node-js-puppeteer/
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
-  await page.goto('file://' + htmlPath, { waitUntil: 'load' });
+  await page.goto('file://' + htmlPath, { waitUntil: 'networkidle0' });
   const pdf = await page.pdf({ format: 'Letter' });
   await browser.close();
 

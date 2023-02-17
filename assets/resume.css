@@ -338,10 +338,14 @@ address {
     margin-top: 0;
   }
 
+  .introduction {
+    font-size: 1.2rem;
+  }
+
   .resume {
     margin-top: 0;
   }
-  
+
   .references,
   .education {
     margin-top: 1rem;
