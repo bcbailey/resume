@@ -6,6 +6,7 @@
   "repository": "github:bcbailey/resume",
   "private": true,
   "scripts": {
+    "watch": "chokidar 'templates/*.ejs' 'assets/**/*' -c 'npm run build'",
     "build": "mkdir -p output/resume && cp resume.yaml output/ && cp assets/* output/resume/ && node build.js",
     "clean": "rm -rf output",
     "lint": "eslint --fix *.js",
@@ -21,6 +22,7 @@
     "yaml": "^2.2.1"
   },
   "devDependencies": {
+    "chokidar-cli": "^3.0.0",
     "eslint": "^8.34.0",
     "eslint-plugin-node": "^11.1.0"
   },
