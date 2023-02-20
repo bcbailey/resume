@@ -22,11 +22,14 @@ experience:
       start: April 2019
     description: >
       As a principal engineer I helped design infrastructure and APIs for
-      systems that helped deliver the user experience platform that all other
-      teams at the company relied on. I played a vital role in migrating all
+      systems that helped deliver the user experience platform which all other
+      teams at the company rely on. I played a vital role in migrating all
       systems into AWS and Kubernetes using industry recommended security and
       best practices. I wrote documentation and trained other developers on the
-      team using this new technology.
+      team using this new technology. I also worked with a small team that built
+      and maintained the tools used at the company for storing application
+      configuration, data driven customer recommendations, and a/b
+      experimenation settings.
 
   - title: Sr. Software Engineer
     company: GoDaddy
@@ -39,7 +42,8 @@ experience:
       Worked on the UX team building shared user interface components originally
       in jQuery and then later with React and React Native. I built APIs using
       nodejs that delivered this content, interfaced with the translation team,
-      and managed infrastructure and deployments.
+      and managed infrastructure and deployments. As a mission critical application
+      it was designed with many layers of redundancy and caching layers.
 
   - title: Sr. Software Engineer
     company: GoDaddy
@@ -50,12 +54,13 @@ experience:
       end: June 2015
     description: >
       I lead and managed a small team that built the "My Account" application
-      using nodejs and Ember. I also helped implement and lead the customer
-      delegation experience alongside the authentication and security teams.
+      using nodejs and Ember, used by over 10 million customers. I also helped
+      implement and lead the customer authentication delegation experience
+      alongside the auth and security teams.
 
-      Build shared web hosting file manager application front-end using
-      Javascript and nodejs, while working with closely with developers building
-      the Java based backend API.
+      Prior that I built the shared web hosting file manager application
+      front-end using Javascript and nodejs, while working with closely with
+      developers building the Java based backend API.
 
   - title: Javascript Web Developer
     company: GoDaddy
@@ -212,19 +217,19 @@ skills:
       - Express
       - Ruby on Rails
 
-  - category: Web Technologies
+  - category: Technologies
     items:
       - HTML and CSS
       - JSON and XML
       - REST APIs
-      - Github
+      - git and github
 
   - category: Databases
     items:
       - DynamoDB
       - Redis
-      - MySQL
       - Cassandra
+      - MySQL
 
   - category: DevOps
     items:
