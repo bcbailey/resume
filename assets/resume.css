@@ -76,12 +76,16 @@ footer {
   font-size: .75rem;
 }
 
-footer p {
-  flex: 1;
+footer .colophon,
+footer .timestamp {
   margin: 0;
 }
 
-footer p:nth-child(2) {
+footer .colophon {
+  flex: 1;
+}
+
+footer .timestamp {
   text-align: right;
 }
 
