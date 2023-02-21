@@ -153,14 +153,18 @@ h1, h2 {
 h1 {
   font-size: 2.8rem;
   font-weight: 700;
+}
 
+@media screen {
   /* letterpress style inset shadow hack */
-  background-color: #000;
-  color: transparent;
-  -webkit-background-clip: text;
-     -moz-background-clip: text;
-          background-clip: text;
-  text-shadow: 0 2px 1px rgba(255, 255, 255, .11);
+  h1 {
+    background-color: #000;
+    color: transparent;
+    text-shadow: 0 2px 1px rgba(255, 255, 255, .11);
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;
+  }
 }
 
 h2 {
