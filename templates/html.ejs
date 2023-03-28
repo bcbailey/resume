@@ -25,8 +25,8 @@
           <div class="location"><%= job.location %></div>
           <div class="dates"><%= job.dates.start %> &ndash; <%= job.dates.end || 'Present' %></div>
         </div>
-<%   job.description.trim().split(/\n+/).forEach(desc => { -%>
-        <p><%= desc %></p>
+<%   job.content.trim().split(/\n+/).forEach(content => { -%>
+        <p><%= content %></p>
 <%   }) -%>
       </div>
 <% }) -%>
@@ -67,7 +67,7 @@
         <% if (degree.location) { %><div class="location"><%= degree.location %></div><% } -%>
       </div>
       <div class="dates"><%= degree.dates.start %> &ndash; <%= degree.dates.end || 'Present' %></div>
-      <% if (degree.description) { %><p><%= degree.description.trim() %></p><% } %>
+      <% if (degree.content) { %><p><%= degree.content.trim() %></p><% } %>
     </div>
 <% }) -%>
   </section>
@@ -76,7 +76,7 @@
     <h2>References <em>&</em> Code&nbsp;Samples</h2>
 <% references.forEach(ref => { -%>
     <div class="reference">
-      <% if (ref.description) { %><p><%= ref.description.trim() %></p><% } %>
+      <% if (ref.content) { %><p><%= ref.content.trim() %></p><% } %>
     </div>
 <% }) -%>
   </section>

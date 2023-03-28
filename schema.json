@@ -51,7 +51,7 @@
             ],
             "additionalProperties": false
           },
-          "description": {
+          "content": {
             "type": "string"
           }
         },
@@ -125,7 +125,7 @@
             ],
             "additionalProperties": false
           },
-          "description": {
+          "content": {
             "type": "string"
           }
         },
@@ -142,7 +142,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "description": {
+          "content": {
             "type": "string"
           }
         },
