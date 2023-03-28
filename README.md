@@ -1,7 +1,8 @@
 # My Resume
 
-This repo contains the scripts used to generate all of the formats of my resume
-from the `resume.yaml` file.
+This repo contains the scripts used to generate all of the output formats for my
+resume. From a single input `resume.yaml` file it can generate JSON, text,
+markdown, HTML/CSS, and PDF outputs.
 
 https://memoryleak.org/resume/
 
@@ -34,6 +35,8 @@ output
 └── resume.yaml
 ```
 
+Running `npm run watch` will allow builds to be run whenever the files change.
+
 ## Output Formats
 
 The above build script can generate the following file formats using the input
@@ -57,12 +60,13 @@ This is the master data format.
 ### .html
 
 This is an HTML version of the resume. It is built using the
-`templates/html.ejs` template file, and anything in the `assets/` directory.
+`templates/html.ejs` template file, and anything in the `assets/` directory
+(such as CSS and images).
 
 ### .pdf
 
 This is the PDF version. It is built by using `puppeteer` to load the HTML in a
-headless browser. It then prints it to PDF taking advantage of print
+headless browser. It then prints it to PDF while taking advantage of print
 stylesheets.
 
 ## Cleanup
