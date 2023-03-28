@@ -35,7 +35,8 @@ output
 └── resume.yaml
 ```
 
-Running `npm run watch` will allow builds to be run whenever the files change.
+Running `npm run watch` will allow builds to be run whenever the source files
+change.
 
 ## Output Formats
 
