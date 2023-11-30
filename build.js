@@ -1,3 +1,4 @@
+// Resume build script by Bradley C Bailey
 import { readFile, writeFile, stat as statFile } from 'node:fs/promises';
 import path from 'path';
 import YAML from 'yaml';
