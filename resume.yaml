@@ -35,7 +35,7 @@ experience:
       In addition I worked with a small team that built and maintained the UI
       and APIs for tools used company-wide for storing application
       configuration, data driven customer recommendations, and A/B
-      experimenation settings.
+      experimentation settings.
 
   - title: Sr. Software Engineer
     company: GoDaddy
@@ -99,15 +99,14 @@ experience:
       start: February 2008
       end: November 2010
     content: >
-      After Data393 was acquired by Latisys, I worked remotely with the
-      development team from the Irvine, CA branch. I introduced subversion for
-      source control, Trac for project management, and other best practices. We
-      built a corporate wide customer management and sales application using
-      Ruby on Rails. Besides working to design the UI and develop the
-      application, I also configured and maintained the production systems. I
-      continued to maintain internal Perl applications, and as the company grew
-      I was a vital asset in integration projects with Salesforce.com, Great
-      Plains billing, and other software.
+      I worked remotely with developers at the Irvine, CA branch. We built a
+      corporate wide customer management and sales application using Ruby on
+      Rails. Besides working to design the UI and develop the application, I
+      also built the infrastructure for the production systems. I continued to
+      maintain internal Perl applications, and as the company grew I was a vital
+      asset in integration projects with Salesforce.com, Great Plains billing,
+      and other software. I introduced subversion for source control, Trac for
+      project management, and other best practices.
 
   - title: Sr. Software Engineer
     company: Data393
@@ -213,6 +212,7 @@ experience:
 skills:
   - category: Languages
     items:
+      - TypeScript
       - JavaScript
       - Ruby
       - Shell
@@ -222,6 +222,7 @@ skills:
     items:
       - React
       - Next.JS
+      - Redux
       - Express
       - Ruby on Rails
 
@@ -230,6 +231,7 @@ skills:
       - HTML and CSS
       - JSON and XML
       - REST APIs
+      - GraphQL APIs
       - git and github
 
   - category: Databases
@@ -238,6 +240,7 @@ skills:
       - Redis
       - Cassandra
       - MySQL
+      - Postgres
 
   - category: DevOps
     items:
@@ -245,6 +248,7 @@ skills:
       - Kubernetes
       - Docker
       - Github Actions
+      - Jenkins
 
 education:
   - title: Cisco Networking Academy CCNA
