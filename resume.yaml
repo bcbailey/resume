@@ -5,13 +5,15 @@ address: Centennial, Colorado USA
 url: https://memoryleak.org
 
 introduction: >
-  I am a full-stack developer with over 20 years experience writing software
-  using web technologies. I am comfortable with everything from infrastructure
-  and system administration, to databases, backend APIs, and front-end design. I
-  am able to quickly learn new skills and technologies. Writing clean well
-  documented code with tests is something I believe strongly in. I am looking
-  for a challenging position in an industry that I can be passionate about. I am
-  accustomed to working remotely after doing it for over 15 years.
+  I am a full-stack engineer with over 20 years experience writing software
+  using web technologies in a *nix environment. I am comfortable working on
+  everything from cloud infrastructure and system administration, to database
+  design, writing backend APIs, all the way through to front-end development. I
+  have a proven track record of writing clean, reliable, and scalable code that
+  is well documented and tested. The majority of my career has been working from
+  remote positions, so I feel I possess strong communication and collaboration
+  skills. I am looking for a challenging position in an industry that aligns
+  with my values and projects that I feel passionate about.
 
 experience:
   - title: Principal Software Engineer
@@ -22,20 +24,23 @@ experience:
       start: April 2019
       end: April 2023
     content: >
-      As a principal engineer I helped design and maintain infrastructure and
-      APIs for systems that helped deliver the user experience platform which
-      all other teams at the company relied upon. I played a vital role in
-      migrating all systems into AWS and Kubernetes using docker and helm
-      following industry recommended security and best practices. Deployments
-      were fully CICD driven with Jenkins and github actions. Lead setting up
-      application and cluster monitoring, logging solutions, performance
-      metrics, and various dashboards. I wrote documentation and mentored other
-      developers on the team.
+      As a principal engineer I helped design, implement, and maintain
+      infrastructure and REST APIs for systems that helped deliver the user
+      experience platform which all other teams at the company relied upon. This
+      was done using a Javascript and TypeScript tech stack.
+
+      I played a vital role in migrating all systems into AWS and Kubernetes
+      using docker and helm following industry recommended security and best
+      practices. Deployments were fully CICD driven with Jenkins and github
+      actions. I lead setting up application and cluster monitoring, logging
+      solutions, performance metrics, and various dashboards. I wrote
+      documentation and mentored other developers on the team.
 
       In addition I worked with a small team that built and maintained the UI
       and APIs for tools used company-wide for storing application
       configuration, data driven customer recommendations, and A/B
-      experimentation settings.
+      experimentation settings. This was implemented with a nodejs and React
+      tech stack.
 
   - title: Sr. Software Engineer
     company: GoDaddy
@@ -205,9 +210,9 @@ experience:
       end: June 1999
     content: >
       As a technician I performed diagnostics and repairs of computers, as well
-      as building new ones. I also provided technical support to customers in
-      person and on the phone and handled sales of computers, accessories, and
-      software.
+      as built custom computer orders. I also provided technical support to
+      customers in person and on the phone and handled sales of computers,
+      accessories, and software.
 
 skills:
   - category: Languages
@@ -222,16 +227,16 @@ skills:
     items:
       - React
       - Next.JS
-      - Redux
       - Express
+      - Redux
       - Ruby on Rails
 
   - category: Technologies
     items:
-      - HTML and CSS
-      - JSON and XML
       - REST APIs
       - GraphQL APIs
+      - HTML and CSS
+      - JSON and XML
       - git and github
 
   - category: Databases
