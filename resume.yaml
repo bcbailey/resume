@@ -16,6 +16,19 @@ introduction: >
   with my values and projects that I feel passionate about.
 
 experience:
+  - title: Full-Stack Software Engineer
+    company: Torus
+    location: Remote
+    url: https://www.torus.co/
+    dates:
+      start: Feb 2024
+    content: >
+      Building software for a climate-tech startup focused on enabling
+      individuals and communities to become their own renewable energy provider.
+      Using a NodeJS, TypeScript, React, and AWS tech stack to create REST APIs
+      supporting mobile app and web based tools. Interfacing and orchestrating
+      IoT devices. And all kinds of other fun stuff.
+
   - title: Principal Software Engineer
     company: GoDaddy
     location: Remote
