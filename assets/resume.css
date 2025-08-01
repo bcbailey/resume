@@ -195,7 +195,7 @@ address {
   .categories,
   .references p {
     margin-left: 1.5rem;
-  }  
+  }
 }
 
 /* Sections */
@@ -341,6 +341,11 @@ address {
     @bottom-left {
       content: counter(page);
     }
+  }
+
+  * {
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "clig" 0;
   }
 
   body {
