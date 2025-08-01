@@ -288,20 +288,18 @@ address {
 .job:last-child { margin-bottom: 0; }
 
 .job::before {
-  position: absolute;
-  left: -.825rem;
-  width: 1.5rem;
-  height: 1.5rem;
   content: '';
-  color: #eee;
-  background: #555;
-  background-image: url("data:image/svg+xml,%3Csvg width='800px' height='800px' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath fill='%23eee' d='M21.5 7.119c-2.023 0-3.667 1.643-3.667 3.667 0 1.353 0.741 2.523 1.833 3.159v0.508c0 0 0 3.667-3.667 3.667-1.52 0-2.711 0.326-3.667 0.825v-8.666c1.093-0.636 1.833-1.806 1.833-3.159 0-2.024-1.643-3.667-3.667-3.667s-3.667 1.643-3.667 3.667c0 1.353 0.74 2.523 1.833 3.159v12.016c-1.093 0.636-1.833 1.805-1.833 3.158 0 2.023 1.643 3.667 3.667 3.667s3.667-1.644 3.667-3.667c0-0.96-0.378-1.826-0.981-2.482 0.534-0.655 1.401-1.185 2.815-1.185 7.276 0 7.333-7.333 7.333-7.333v-0.508c1.092-0.636 1.833-1.806 1.833-3.159 0-2.024-1.644-3.667-3.667-3.667zM10.5 5.286c1.014 0 1.833 0.819 1.833 1.833s-0.819 1.833-1.833 1.833c-1.014 0-1.833-0.819-1.833-1.833s0.819-1.833 1.833-1.833zM10.5 27.286c-1.014 0-1.833-0.82-1.833-1.833 0-1.012 0.819-1.833 1.833-1.833s1.833 0.822 1.833 1.833c0 1.013-0.819 1.833-1.833 1.833zM21.5 12.619c-1.013 0-1.833-0.819-1.833-1.833s0.82-1.833 1.833-1.833 1.833 0.819 1.833 1.833c0 1.014-0.82 1.833-1.833 1.833z'%3E%3C/path%3E%3C/svg%3E");
+  position: absolute;
+  left: -1.1rem;
+  top: -.125rem;
+  width: 1.75rem;
+  height: 1.75rem;
   background-size: 1.1rem;
-  background-position: center right 15%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' fill='currentColor' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M416,160a64,64,0,1,0-96.27,55.24c-2.29,29.08-20.08,37-75,48.42-17.76,3.68-35.93,7.45-52.71,13.93V151.39a64,64,0,1,0-64,0V360.61a64,64,0,1,0,64.42.24c2.39-18,16-24.33,65.26-34.52,27.43-5.67,55.78-11.54,79.78-26.95,29-18.58,44.53-46.78,46.36-83.89A64,64,0,0,0,416,160ZM160,64a32,32,0,1,1-32,32A32,32,0,0,1,160,64Zm0,384a32,32,0,1,1,32-32A32,32,0,0,1,160,448ZM352,192a32,32,0,1,1,32-32A32,32,0,0,1,352,192Z'/%3E%3C/svg%3E");
+  background-position: center right;
   background-repeat: no-repeat;
-  outline: 1px solid #555;
-  border: 2px solid #f0f0f0;
-  border-radius: 50%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
