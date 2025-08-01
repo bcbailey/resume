@@ -35,26 +35,19 @@
 
   <aside class="skills">
     <h2>Skills</h2>
-<% if (typeof skills[0] === 'object') { -%>
-    <div class="categories">
-<%   skills.forEach(category => { -%>
-      <div class="category">
-        <h3><%= category.category %></h3>
-        <ul>
-<%     category.items.forEach(skill => { -%>
-          <li><%= skill %></li>
-<%     }) -%>
-        </ul>
-      </div>
-<%   }) -%>
-    </div>
-<% } else { -%>
     <ul>
+<% if (typeof skills[0] === 'object') { -%>
+<%   skills.forEach(category => { -%>
+      <li><strong><%= category.category %></strong>: <%= category.items.join(', ') %></li>
+<%   }) -%>
+<% } else { -%>
 <%   skills.forEach(skill => { -%>
       <li><%= skill %></li>
 <%   }) -%>
-    </ul>
 <% } -%>
+    </ul>
+    <ul>
+    </ul>
   </aside>
 
   <section class="education">
