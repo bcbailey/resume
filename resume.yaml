@@ -239,8 +239,8 @@ skills:
       - Next.JS
       - Storybook
       - Figma
-      - HTML and CSS
-      - SVG and animation
+      - HTML / CSS
+      - SVG / animation
       - Accessibility (a11y)
       - Internationalization (i18n)
 
@@ -250,7 +250,8 @@ skills:
       - GraphQL APIs
       - Microservices
       - Express
-      - git and github
+      - Fastify
+      - Hono
 
   - category: Toolchain
     items:
@@ -262,6 +263,8 @@ skills:
       - Cypress
       - ESLint
       - Prettier
+      - git / github
+      - monorepos
 
   - category: Databases
     items:
@@ -278,7 +281,6 @@ skills:
       - Docker
       - Github Actions
       - Jenkins
-      - monorepos
 
 education:
   - title: Cisco Networking Academy CCNA
