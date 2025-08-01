@@ -36,15 +36,13 @@
   <aside class="skills">
     <h2>Skills</h2>
     <ul>
-<% if (typeof skills[0] === 'object') { -%>
-<%   skills.forEach(category => { -%>
-      <li><strong><%= category.category %></strong>: <%= category.items.join(', ') %></li>
-<%   }) -%>
-<% } else { -%>
-<%   skills.forEach(skill => { -%>
+<% skills.forEach(skill => { -%>
+<%   if (typeof skill === 'object') { -%>
+      <li><strong><%= skill.category %></strong>: <%= skill.items.join(', ') %></li>
+<%   } else { -%>
       <li><%= skill %></li>
-<%   }) -%>
-<% } -%>
+<%   } -%>
+<% }) -%>
     </ul>
     <ul>
     </ul>
@@ -57,10 +55,14 @@
       <div class="details">
         <h3 class="title"><%= degree.title %></h3>
         <div class="school"><%= degree.school %></div>
-        <% if (degree.location) { %><div class="location"><%= degree.location %></div><% } -%>
+<%   if (degree.location) { -%>
+        <div class="location"><%= degree.location %></div>
+<%   } -%>
       </div>
       <div class="dates"><%= degree.dates.start %> &ndash; <%= degree.dates.end || 'Present' %></div>
-      <% if (degree.content) { %><p><%= degree.content.trim() %></p><% } %>
+<%   if (degree.content) { -%>
+      <p><%= degree.content.trim() %></p>
+<%   } -%>
     </div>
 <% }) -%>
   </section>
