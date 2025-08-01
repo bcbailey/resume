@@ -5,15 +5,13 @@ address: Centennial, Colorado USA
 url: https://memoryleak.org
 
 introduction: >
-  I am a full-stack engineer with over 20 years experience writing software
-  using web technologies in a *nix environment. I am comfortable working on
-  everything from cloud infrastructure and system administration, to database
-  design, writing backend APIs, all the way through to front-end development. I
-  have a proven track record of writing clean, reliable, and scalable code that
-  is well documented and tested. The majority of my career has been working from
-  remote positions, so I feel I possess strong communication and collaboration
-  skills. I am looking for a challenging position in an industry that aligns
-  with my values and projects that I feel passionate about.
+  *Senior Software Engineer* with 20+ years of experience building user focused
+  web applications. Skilled across the full-stack -- including cloud
+  infrastructure, backend APIs, and databases -- but specializing in modern
+  frontend technologies like React and TypeScript. Passionate about crafting
+  beautiful, intuitive, and accessible interfaces that are reliable,
+  well-tested, and thoughtfully designed.  Seeking impactful work with teams
+  that value quality code, collaboration, and user-centered design.
 
 experience:
   - title: Full-Stack Software Engineer
@@ -236,29 +234,43 @@ skills:
       - Shell
       - SQL
 
-  - category: Frameworks
+  - category: Frontend
     items:
       - React
       - Next.JS
-      - Express
-      - Redux
-      - Ruby on Rails
+      - Storybook
+      - Figma
+      - HTML and CSS
+      - SVG and animation
+      - Accessibility (a11y)
+      - Internationalization (i18n)
 
-  - category: Technologies
+  - category: Backend
     items:
       - REST APIs
       - GraphQL APIs
-      - HTML and CSS
-      - JSON and XML
+      - Microservices
+      - Express
       - git and github
+
+  - category: Toolchain
+    items:
+      - Vite
+      - Webpack
+      - Jest
+      - Vitest
+      - React testing library
+      - Cypress
+      - ESLint
+      - Prettier
 
   - category: Databases
     items:
       - DynamoDB
-      - Redis
-      - Cassandra
-      - MySQL
       - Postgres
+      - MySQL
+      - Cassandra
+      - Redis
 
   - category: DevOps
     items:
@@ -267,6 +279,7 @@ skills:
       - Docker
       - Github Actions
       - Jenkins
+      - monorepos
 
 education:
   - title: Cisco Networking Academy CCNA
