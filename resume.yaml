@@ -14,7 +14,7 @@ introduction: >
   that value quality code, collaboration, and user-centered design.
 
 experience:
-  - title: Full-Stack Software Engineer
+  - title: Sr. Full-Stack Software Engineer
     company: Torus
     location: Remote
     url: https://www.torus.co/
@@ -27,7 +27,7 @@ experience:
       supporting mobile app and web based tools. Interfacing and orchestrating
       IoT devices. And all kinds of other fun stuff.
 
-  - title: Principal Software Engineer
+  - title: Principal Software Engineer V
     company: GoDaddy
     location: Remote
     url: https://www.godaddy.com/
@@ -40,20 +40,19 @@ experience:
       experience platform which all other teams at the company relied upon. This
       was done using a Javascript and TypeScript tech stack.
 
-      I played a vital role in migrating all systems into AWS and Kubernetes
-      using docker and helm following industry recommended security and best
-      practices. Deployments were fully CICD driven with Jenkins and github
-      actions. I lead setting up application and cluster monitoring, logging
-      solutions, performance metrics, and various dashboards. I wrote
+      I also worked with a small team that built and maintained the UI and APIs
+      for company-wide tooling used to store application configuration, data
+      driven customer recommendations, and A/B experimentation settings. This
+      was implemented with a nodejs and React tech stack.
+
+      In addition I played a vital role in migrating all systems into AWS and
+      Kubernetes using docker and helm following industry recommended security
+      and best practices. Deployments were fully CICD driven with Jenkins and
+      github actions. I lead setting up application and cluster monitoring,
+      logging solutions, performance metrics, and various dashboards. I wrote
       documentation and mentored other developers on the team.
 
-      In addition I worked with a small team that built and maintained the UI
-      and APIs for tools used company-wide for storing application
-      configuration, data driven customer recommendations, and A/B
-      experimentation settings. This was implemented with a nodejs and React
-      tech stack.
-
-  - title: Sr. Software Engineer
+  - title: Sr. Software Engineer IV
     company: GoDaddy
     location: Remote
     url: https://www.godaddy.com/
@@ -61,13 +60,13 @@ experience:
       start: June 2015
       end: April 2019
     content: >
-      Worked on the UX team building shared user interface components originally
-      in jQuery and then later with React and React Native. I built highly
-      performant APIs using nodejs streams that delivered shared header and
-      navigation across all applications at the company, interfaced with the
-      translation team, and managed infrastructure and deployments. As a
-      mission-critical application, it was designed with many layers of
-      redundancy and caching.
+      Worked on the UX platform team building the design system and shared user
+      interface components, originally in jQuery and then later with React and
+      React Native. I built highly performant APIs using nodejs streams that
+      delivered shared header and navigation across all company applications,
+      interfaced with the internationalization team, and managed infrastructure
+      and deployments. These were mission-critical applications designed with
+      many layers of redundancy and caching.
 
   - title: Sr. Software Engineer
     company: GoDaddy
@@ -82,11 +81,11 @@ experience:
       implement and lead the customer authentication delegation experience
       alongside the auth and security teams.
 
-      Prior that I built the shared web hosting file manager application
+      Prior to that I built the shared web hosting file manager application
       front-end using Javascript and nodejs, while working closely with
       developers building the Java based backend API.
 
-  - title: Javascript Web Developer
+  - title: Sr. Front-End Engineer
     company: GoDaddy
     location: Remote
     url: https://www.godaddy.com/
@@ -115,14 +114,14 @@ experience:
       start: February 2008
       end: November 2010
     content: >
-      I worked remotely with developers at the Irvine, CA branch. We built a
-      corporate wide customer management and sales application using Ruby on
-      Rails. Besides working to design the UI and develop the application, I
-      also built the infrastructure for the production systems. I continued to
-      maintain internal Perl applications, and as the company grew I was a vital
-      asset in integration projects with Salesforce.com, Great Plains billing,
-      and other software. I introduced subversion for source control, Trac for
-      project management, and other best practices.
+      Working with a remote team, we built a corporate wide customer management
+      and sales application using Ruby on Rails. Besides working to design the
+      UI and develop the application, I also built the infrastructure for the
+      production systems. I continued to maintain internal Perl applications,
+      and as the company grew I was a vital asset in integration projects with
+      Salesforce.com, Great Plains billing, and other software. I introduced
+      subversion for source control, Trac for project management, and other best
+      practices.
 
   - title: Sr. Software Engineer
     company: Data393
@@ -141,7 +140,7 @@ experience:
       existing helpdesk software, write scripts to help with the system
       administration tasks, and provide statistical reports. In addition I also
       provided escalated support for systems and network related problems as
-      part Engineering.
+      part the Engineering team.
 
   - title: Software Engineer
     company: E-COM Media Group
