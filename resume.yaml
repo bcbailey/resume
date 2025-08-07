@@ -255,19 +255,23 @@ skills:
       - Fastify
       - Hono
 
-  - category: Toolchain
+  - category: Tooling
     items:
-      - git
-      - github
-      - monorepos
+      - GitHub
       - Vite
       - Webpack
-      - Jest
-      - Vitest
-      - React testing library
-      - Cypress
       - ESLint
       - Prettier
+      - Lerna
+      - Monorepos
+
+  - category: Testing
+    items:
+      - Jest
+      - Vitest
+      - React Testing Library
+      - Sinon
+      - Cypress
 
   - category: Databases
     items:
