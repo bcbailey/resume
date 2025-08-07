@@ -208,6 +208,12 @@ address {
   margin-bottom: 0;
 }
 
+.introduction em {
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
 .job,
 .degree,
 .reference {
