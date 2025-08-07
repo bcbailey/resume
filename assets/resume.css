@@ -274,7 +274,15 @@ address {
 .skills ul { list-style: none; }
 
 .skills li {
-  line-height: 1.45rem;
+  line-height: 1.6rem;
+}
+
+.skills li strong {
+  text-transform: uppercase;
+  text-align: right;
+  display: inline-block;
+  width: 9em;
+  margin-right: 2em;
 }
 
 @media print, (min-width: 40rem) {

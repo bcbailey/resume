@@ -40,7 +40,7 @@
     <ul>
 <% skills.forEach(skill => { -%>
 <%   if (typeof skill === 'object') { -%>
-      <li><strong><%= skill.category %></strong>: <%= skill.items.join(', ') %></li>
+      <li><strong><%= skill.category %></strong> <%= skill.items.join(', ') %></li>
 <%   } else { -%>
       <li><%= skill %></li>
 <%   } -%>
