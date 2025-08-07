@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "watch": "chokidar resume.yaml 'templates/**/*' 'assets/**/*' -c 'npm run build'",
-    "build": "mkdir -p output/resume && cp resume.yaml output/ && cp assets/* output/resume/ && node build.js",
+    "build": "mkdir -p output/resume && cp resume.yaml output/ && cp -R assets/* output/resume/ && node build.js",
     "clean": "rm -rf output",
     "lint": "eslint --fix *.js",
     "pretest": "npm run lint",
