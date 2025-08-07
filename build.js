@@ -25,7 +25,10 @@ const formats = new Map([
 const helpers = {
   _: lodash,
   wordwrap,
-  markdown: micromark
+  markdown: (text) => {
+    // Anything more complicated will need require switching over to remark with smartypants
+    return micromark(text).replace(/-{2,3}/g, '—')
+  }
 };
 
 async function main() {
