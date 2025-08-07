@@ -24,7 +24,8 @@
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
     "eslint": "^8.34.0",
-    "eslint-plugin-node": "^11.1.0"
+    "eslint-plugin-node": "^11.1.0",
+    "micromark": "^4.0.2"
   },
   "engines": {
     "node": ">=16.0.0"

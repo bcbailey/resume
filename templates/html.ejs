@@ -10,9 +10,11 @@
     </address>
   </header>
 
+  <section class="introduction">
 <% introduction.trim().split(/\n+/).forEach(intro => { -%>
-  <p class="introduction"><%= intro %></p>
-<% }) -%>
+    <%- markdown(intro) -%>
+<%  }) -%>
+  </section>
 
   <section class="experience">
     <h2>Experience</h2>
@@ -26,7 +28,7 @@
           <div class="dates"><%= job.dates.start %> &ndash; <%= job.dates.end || 'Present' %></div>
         </div>
 <%   job.content.trim().split(/\n+/).forEach(content => { -%>
-        <p><%= content %></p>
+        <%- markdown(content) -%>
 <%   }) -%>
       </div>
 <% }) -%>
@@ -43,8 +45,6 @@
       <li><%= skill %></li>
 <%   } -%>
 <% }) -%>
-    </ul>
-    <ul>
     </ul>
   </aside>
 

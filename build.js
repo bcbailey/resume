@@ -6,6 +6,7 @@ import ejs from 'ejs';
 import lodash from 'lodash';
 import wordwrap from 'word-wrap';
 import puppeteer from 'puppeteer';
+import { micromark } from 'micromark';
 
 const __dirname = path.dirname(process.argv[1]);
 const outputDirectory = process.argv[2] || 'output';
@@ -23,7 +24,8 @@ const formats = new Map([
 // Template helpers
 const helpers = {
   _: lodash,
-  wordwrap
+  wordwrap,
+  markdown: micromark
 };
 
 async function main() {
