@@ -257,18 +257,19 @@ address {
   font-weight: normal;
 }
 
+.skills {
+  margin-block-end: 1rem;
+}
+
 .skills h2 {
   display: none;
 }
 
-.skills .category {
-  margin-block: 1rem;
-}
-
 .skills ul { list-style: none; }
-.skills li { display: inline; }
-.skills li::after { content: ', '; }
-.skills li:last-child::after { content: ''; }
+
+.skills li {
+  line-height: 1.45rem;
+}
 
 @media print, (min-width: 40rem) {
   .details .title::after { content: ''; }
