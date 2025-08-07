@@ -40,7 +40,7 @@ experience:
       As a principal engineer I helped design, implement, and maintain
       infrastructure and REST APIs for systems that helped deliver the user
       experience platform which all other teams at the company relied upon. This
-      was done using a Javascript and TypeScript tech stack.
+      was done using a JavaScript and TypeScript tech stack.
 
       I also worked with a small team that built and maintained the UI and APIs
       for company-wide tooling used to store application configuration, data
@@ -84,7 +84,7 @@ experience:
       alongside the auth and security teams.
 
       Prior to that I built the shared web hosting file manager application
-      front-end using Javascript and nodejs, while working closely with
+      front-end using JavaScript and nodejs, while working closely with
       developers building the Java based backend API.
 
   - title: Sr. Front-End Engineer
@@ -283,7 +283,7 @@ skills:
       - CDK
       - Kubernetes
       - Docker
-      - Github Actions
+      - GitHub Actions
       - Jenkins
 
 education:
