@@ -119,11 +119,10 @@ experience:
       Working with a remote team, we built a corporate wide customer management
       and sales application using Ruby on Rails. Besides working to design the
       UI and develop the application, I also built the infrastructure for the
-      production systems. I continued to maintain internal Perl applications,
-      and as the company grew I was a vital asset in integration projects with
-      Salesforce.com, Great Plains billing, and other software. I introduced
-      subversion for source control, Trac for project management, and other best
-      practices.
+      production systems. As the company grew I was a vital asset in integration
+      projects with Salesforce.com, Great Plains billing, and other software. I
+      introduced subversion for source control, Trac for project management, and
+      other best practices.
 
   - title: Sr. Software Engineer
     company: Data393
@@ -138,11 +137,10 @@ experience:
       written for managing datacenter assets, tracking IP space, interfacing
       with network equipment, usage tracking, account provisioning, and more.
       All were written using Object Oriented Perl, mod_perl, MySQL database, and
-      were well tested, and documented. I also continued to maintain the
-      existing helpdesk software, write scripts to help with the system
-      administration tasks, and provide statistical reports. In addition I also
-      provided escalated support for systems and network related problems as
-      part the Engineering team.
+      were well tested, and documented. I also maintained the existing helpdesk
+      software, wrote scripts for system administration tasks, and provide
+      statistical reports. In addition I also provided escalated support for
+      systems and network related problems as part the Engineering team.
 
   - title: Software Engineer
     company: E-COM Media Group
