@@ -23,7 +23,7 @@
       <div class="job">
         <div class="details">
           <h3 class="title"><%= job.title %></h3>
-          <div class="company"><%= job.company %></div>
+          <div class="company"><a href="<%= job.url %>"><%= job.company %></a></div>
           <div class="location"><%= job.location %></div>
           <div class="dates"><%= job.dates.start %> &ndash; <%= job.dates.end || 'Present' %></div>
         </div>
@@ -71,7 +71,11 @@
     <h2>References <em>&</em> Code&nbsp;Samples</h2>
 <% references.forEach(ref => { -%>
     <div class="reference">
-      <% if (ref.content) { %><p><%= ref.content.trim() %></p><% } %>
+<%   if (ref.link) { -%>
+      <p><a href="<%= ref.link %>"><%= (ref.content || ref.link).trim() %></a></p>
+<%   } else { -%>
+      <p><%= ref.content.trim() %></p>
+<%   } -%>
     </div>
 <% }) -%>
   </section>

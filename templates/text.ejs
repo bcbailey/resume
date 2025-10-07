@@ -36,14 +36,16 @@
 
 <% education.forEach(degree => { -%>
 ### <%= degree.title %>
-<%= degree.school %><% if (degree.location) { %>, <%= degree.location %><% } %>  
+<%= degree.school %><% if (degree.location) { %>, <%= degree.location %><% } %>
 <%= degree.dates.start %> - <%= degree.dates.end || 'Present' %>
-<% if (degree.content) { %><%= wordwrap(degree.content, { width: 78, indent: '' }) %><% } -%>
-<% }) %>
+<%   if (degree.content) { %>
+<%= wordwrap(degree.content, { width: 78, indent: '' }) %>
+<%   } %>
+<% }) -%>
 
 ## References & Code Samples
 -------------
 
 <% references.forEach(ref => { -%>
-<% if (ref.content) { %><%= wordwrap(ref.content, { width: 78, indent: '' }) %><% } %>
+<%= wordwrap(ref.content || ref.link, { width: 78, indent: '' }) %>
 <% }) -%>

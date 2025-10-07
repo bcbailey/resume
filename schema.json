@@ -144,6 +144,9 @@
         "properties": {
           "content": {
             "type": "string"
+          },
+          "link": {
+            "type": "string"
           }
         },
         "additionalProperties": false
