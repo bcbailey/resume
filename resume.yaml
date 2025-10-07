@@ -23,11 +23,22 @@ experience:
       start: February 2024
       end: August 2025
     content: >
-      Building software for a climate-tech startup focused on enabling
-      individuals and communities to become their own renewable energy provider.
-      Using a NodeJS, TypeScript, React, and AWS tech stack to create REST APIs
-      supporting mobile app and web based tools. Interfacing and orchestrating
-      IoT devices. And all kinds of other fun stuff.
+      Built modern web applications for a startup focused on renewable energy,
+      energy storage, and IoT integration. Led development on two React based
+      apps (customer-facing and internal) using React Router, React Query, and
+      MUI in a serverless TypeScript/AWS architecture.
+
+      Collaborated closely with design team and created a company-wide design
+      system using Figma design tokens, Storybook, and custom React components
+      with hooks and unit tests (Jest, React Testing Library).
+
+      Drove front-end architectural improvements, including a shift from React
+      Contexts to React Query, resulting in reduced bundle sizes and simplified
+      state management. Built application dashboards with custom charting and
+      SVG animations to visualize power grid and battery usage data.
+
+      Contributed to backend API development and DevOps workflows (GitHub
+      Actions, monorepo migration).
 
   - title: Principal Software Engineer V
     company: GoDaddy
@@ -232,19 +243,19 @@ skills:
       - Ruby
       - Shell
       - SQL
+      - Markdown
 
   - category: Frontend
     items:
       - React
-      - Next.JS
       - Storybook
       - Figma
       - HTML
       - CSS
       - SVG
       - Animation
-      - Accessibility (a11y)
-      - Internationalization (i18n)
+      - Accessibility
+      - Internationalization
 
   - category: Backend
     items:
@@ -260,6 +271,7 @@ skills:
       - GitHub
       - Vite
       - Webpack
+      - PostCSS
       - ESLint
       - Prettier
       - Lerna
@@ -300,4 +312,5 @@ education:
       end: December 2000
 
 references:
-  - content: Available upon request.
+  - link: https://github.com/bcbailey
+  - content: Others available upon request.
