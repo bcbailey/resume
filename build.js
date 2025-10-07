@@ -83,9 +83,10 @@ async function renderHtml(data) {
 }
 
 async function renderPdf() {
-  // Make sure html file exists first
   const htmlFormat = formats.get('html') || { file: 'resume/index.html' };
   const htmlPath = path.join(__dirname, outputDirectory, htmlFormat.file);
+
+  // Make sure html file exists first
   try {
     await statFile(htmlPath);
   }
@@ -101,7 +102,7 @@ async function renderPdf() {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   await page.goto('file://' + htmlPath, { waitUntil: 'networkidle0' });
-  const pdf = await page.pdf({ format: 'Letter' });
+  const pdf = await page.pdf({ format: 'Letter', printBackground: true, displayHeaderFooter: false });
   await browser.close();
 
   return pdf;

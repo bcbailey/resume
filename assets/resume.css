@@ -358,9 +358,11 @@ address {
   @page {
     margin: 1.5cm 2cm;
 
-    @bottom-left {
+    /* @bottom-left {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: .75rem;
       content: counter(page);
-    }
+    } */
   }
 
   * {
