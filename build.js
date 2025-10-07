@@ -1,4 +1,5 @@
 // Resume build script by Bradley C Bailey
+// Copyright 2023-2025
 import { readFile, writeFile, stat as statFile } from 'node:fs/promises';
 import path from 'path';
 import YAML from 'yaml';
