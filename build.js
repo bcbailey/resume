@@ -90,7 +90,7 @@ async function renderPdf() {
   try {
     await statFile(htmlPath);
   }
-  catch (err) {
+  catch (ignoreError) {
     throw new Error(`dependency ${htmlFormat.file} not found`);
   }
 
