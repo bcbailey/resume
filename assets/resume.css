@@ -106,16 +106,6 @@ footer .timestamp {
     text-align: right;
   }
 
-  .skills .categories {
-    display: flex;
-    gap: 1.5rem;
-  }
-
-  .skills .category {
-    text-align: left;
-    flex: 1;
-  }
-
   footer {
     margin-top: 3rem;
   }
@@ -273,22 +263,28 @@ address {
 
 .skills ul { list-style: none; }
 
-.skills li {
-  line-height: 1.6rem;
+.skills li + li {
+  margin-top: 0.5rem;
 }
 
 .skills li strong {
+  display: block;
+  text-align: left;
   text-transform: uppercase;
-  text-align: right;
-  display: inline-block;
-  width: 9em;
-  margin-right: 2em;
+  letter-spacing: 0.03em;
 }
 
 @media print, (min-width: 40rem) {
-  .details .title::after { content: ''; }
-  .skills li { display: block; }
-  .skills li::after { content: ''; }
+  .skills li + li {
+    margin-top: 0.25em;
+  }
+
+  .skills li strong {
+    display: inline-block;
+    width: 10em;
+    text-align: right;
+    margin-right: 1.5em;
+  }
 }
 
 /* Timeline */
