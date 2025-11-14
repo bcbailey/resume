@@ -18,7 +18,7 @@ const formats = new Map([
   [ 'json', { fn: renderJson } ],
   [ 'txt',  { fn: renderText } ],
   [ 'md',   { fn: renderText } ],
-  [ 'html', { fn: renderHtml, file: 'index.html' } ],
+  [ 'html', { fn: renderHtml, file: 'resume/index.html' } ],
   [ 'pdf',  { fn: renderPdf } ]
 ]);
 
