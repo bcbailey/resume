@@ -18,7 +18,7 @@ const formats = new Map([
   [ 'json', { fn: renderJson } ],
   [ 'txt',  { fn: renderText } ],
   [ 'md',   { fn: renderText } ],
-  [ 'html', { fn: renderHtml, file: 'resume/index.html' } ],
+  [ 'html', { fn: renderHtml, file: 'index.html' } ],
   [ 'pdf',  { fn: renderPdf } ]
 ]);
 
@@ -83,7 +83,7 @@ async function renderHtml(data) {
 }
 
 async function renderPdf() {
-  const htmlFormat = formats.get('html') || { file: 'resume/index.html' };
+  const htmlFormat = formats.get('html') || { file: 'index.html' };
   const htmlPath = path.join(__dirname, outputDirectory, htmlFormat.file);
 
   // Make sure html file exists first
