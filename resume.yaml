@@ -37,8 +37,9 @@ experience:
       state management. Built application dashboards with custom charting and
       SVG animations to visualize power grid and battery usage data.
 
-      Contributed to backend API development and DevOps workflows (GitHub
-      Actions, monorepo migration).
+      Contributed to backend REST API development. Integrated with external APIs
+      such as the National Weather Service. Improved DevOps workflows using
+      GitHub Actions and migrated to a monorepo structure.
 
   - title: Principal Software Engineer V
     company: GoDaddy
