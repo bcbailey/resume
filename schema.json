@@ -30,6 +30,9 @@
           "company": {
             "type": "string"
           },
+          "department": {
+            "type": "string"
+          },
           "location": {
             "type": "string"
           },

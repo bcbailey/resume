@@ -43,6 +43,7 @@ experience:
 
   - title: Principal Software Engineer V
     company: GoDaddy
+    department: UX Platform
     location: Remote
     url: https://www.godaddy.com/
     dates:
@@ -68,6 +69,7 @@ experience:
 
   - title: Sr. Software Engineer IV
     company: GoDaddy
+    department: UX Platform
     location: Remote
     url: https://www.godaddy.com/
     dates:
@@ -84,6 +86,7 @@ experience:
 
   - title: Sr. Software Engineer
     company: GoDaddy
+    department: My Account
     location: Remote
     url: https://www.godaddy.com/
     dates:
@@ -101,6 +104,7 @@ experience:
 
   - title: Sr. Front-End Engineer
     company: GoDaddy
+    department: Easy Database
     location: Remote
     url: https://www.godaddy.com/
     dates:
@@ -298,6 +302,7 @@ skills:
     items:
       - AWS
       - CDK
+      - Cloudflare
       - Kubernetes
       - Docker
       - GitHub Actions
