@@ -133,13 +133,17 @@ body {
 
 h1, h2 {
   line-height: 1.1;
-  font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
-  font-weight: 600;
 }
 
 h1 {
+  font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
   font-size: 2.8rem;
   font-weight: 700;
+}
+
+h2 {
+  font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
+  font-weight: 600;
 }
 
 @media screen {
@@ -147,7 +151,7 @@ h1 {
   h1 {
     background-color: #000;
     color: transparent;
-    text-shadow: 0 2px 1px rgba(255, 255, 255, .11);
+    text-shadow: 0 2px 1px rgba(255, 255, 255, .21);
     -webkit-background-clip: text;
        -moz-background-clip: text;
             background-clip: text;
@@ -155,15 +159,14 @@ h1 {
 }
 
 h2 {
-  border-top: 5px solid var(--border-color);
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 4px solid var(--border-color);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding-block: .25em .2em;
+  letter-spacing: 0.08em;
+  padding-block-end: .15em;
 }
 
-p {
-  margin-block: 0 1rem;
+p + p {
+  margin-block-start: 1rem;
 }
 
 address {
@@ -173,15 +176,6 @@ address {
 @media print, (min-width: 40rem) {
   h1 {
     font-size: 5rem;
-  }
-
-  h2 {
-    padding-left: 1.3rem;
-  }
-
-  .categories,
-  .references p {
-    margin-left: 1.5rem;
   }
 }
 
@@ -202,8 +196,7 @@ address {
 }
 
 .job,
-.degree,
-.reference {
+.degree {
   margin-block: 1rem;
 }
 
@@ -263,6 +256,18 @@ address {
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+}
+
+.references {
+  margin-block-start: 1rem;
+}
+
+.references h2 {
+  margin-block-end: 1rem;
+}
+
+.reference {
+  margin-block: 0;
 }
 
 @media print, (min-width: 40rem) {
