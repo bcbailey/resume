@@ -2,6 +2,7 @@
   --bg-color: #f3f3f2;
   --highlight-color: #fff;
   --text-color: #282826;
+  --text-color-muted: #555;
   --text-color-dark: #000;
   --link-color: rgb(10, 95, 198);
   --border-color: #000;
@@ -83,10 +84,6 @@ footer .timestamp {
 
 footer .colophon {
   flex: 1;
-}
-
-footer .timestamp {
-  text-align: right;
 }
 
 @media print, (min-width: 40rem) {
@@ -312,17 +309,6 @@ address {
   print-color-adjust: exact;
 }
 
-/* Footer */
-
-.octicon {
-  display: inline-block;
-  overflow: visible !important;
-  vertical-align: text-bottom;
-  height: 1.25em;
-  margin: 0 -.25em;
-  fill: var(--text-color);
-}
-
 @media print, (min-width: 40rem) {
   .jobs {
     margin-left: 10em;
@@ -338,7 +324,27 @@ address {
   }
 }
 
+/* Footer */
+
+.timestamp {
+  text-align: right;
+  margin-left: .75rem;
+}
+
+.octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  height: 1.25em;
+  margin: 0 -.25em;
+  fill: var(--text-color);
+}
+
 /* Print specific styles */
+
+.print-only {
+  display: none;
+}
 
 @media print {
   :root {
@@ -365,8 +371,26 @@ address {
     padding: 0;
   }
 
+  body::before {
+    display: none;
+  }
+
   h1 {
     font-size: 46pt;
+    margin-top: 0;
+  }
+
+  a, a:visited {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  footer {
+    color: var(--text-color-muted);
+    margin-top: 14em;
+  }
+
+  .resume {
     margin-top: 0;
   }
 
@@ -374,17 +398,11 @@ address {
     font-size: 1.2rem;
   }
 
-  .resume {
-    margin-top: 0;
+  .print-only {
+    display: unset;
   }
 
-  .references,
-  .education {
-    margin-top: 1rem;
-  }
-
-  body::before,
-  footer {
+  .screen-only {
     display: none;
   }
 }
