@@ -284,17 +284,18 @@ skills:
 
   - category: Testing
     items:
-      - Jest
       - Vitest
+      - Jest
       - React Testing Library
       - Sinon
       - Cypress
+      - Playwright
 
   - category: Databases
     items:
-      - DynamoDB
-      - Postgres
+      - PostgreSQL
       - MySQL
+      - DynamoDB
       - Cassandra
       - Redis
 
