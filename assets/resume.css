@@ -243,12 +243,6 @@ address {
   font-weight: bold;
 }
 
-.details .title::after,
-.details .school::after {
-  content: ', ';
-  margin-right: .2em;
-}
-
 .details .dates {
   font-weight: normal;
 }
