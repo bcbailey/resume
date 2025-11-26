@@ -279,11 +279,19 @@ address {
     margin-top: 0.25em;
   }
 
+  .skills li {
+    display: flex;
+    gap: 1.5em;
+  }
+
   .skills li strong {
-    display: inline-block;
+    display: block;
     width: 10em;
     text-align: right;
-    margin-right: 1.5em;
+  }
+
+  .skills li p {
+    flex: 1;
   }
 }
 
