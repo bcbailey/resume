@@ -253,6 +253,7 @@ skills:
   - category: Frontend
     items:
       - React
+      - Web Components
       - Storybook
       - Figma
       - HTML
